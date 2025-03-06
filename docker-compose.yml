@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  frontend:
+    build:
+      context: ./static  # Path to your frontend code
+    volumes:
+      - path_finder:/usr/share/nginx/html  # Mount volume here for frontend
+    ports:
+      - "8080:80"
+
+  backend:
+    build:
+      context: ./backend  # Path to your backend code
+    volumes:
+      - path_finder:/app  # Mount same volume here for backend
+    ports:
+      - "8000:8000"
+
+volumes:
+  path_finder:  # Define the volume here
+    driver: local  # Docker uses the default local driver for storage
+
+networks:
+  app-network:
+    driver: bridge
