@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pydantic
+asyncio
+websockets
+starlette>=0.20.0
