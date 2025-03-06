@@ -2,23 +2,28 @@ version: "3.9"
 services:
   frontend:
     build:
-      context: ./static  # Path to your frontend code
-    volumes:
-      - path_finder:/usr/share/nginx/html  # Mount volume here for frontend
+      context: ./static
     ports:
       - "8080:80"
+    volumes:
+      - ./static:/usr/share/nginx/html
+    networks:
+      - app-network
 
   backend:
     build:
-      context: ./backend  # Path to your backend code
-    volumes:
-      - path_finder:/app  # Mount same volume here for backend
+      context: ./backend
     ports:
       - "8000:8000"
+    volumes:
+      - ./backend/app:/app       # Bind mount for local development
+      - my_backend_data:/data    # Volume for persistent data
+    networks:
+      - app-network
 
 volumes:
-  path_finder:  # Define the volume here
-    driver: local  # Docker uses the default local driver for storage
+  my_backend_data:  # Defines the volume "my_backend_data"
+    driver: local   # Default driver for local volumes
 
 networks:
   app-network:
