@@ -2,28 +2,23 @@ version: "3.9"
 services:
   frontend:
     build:
-      context: ./static
+      context: ./static  # Path to your frontend directory
     ports:
       - "8080:80"
     volumes:
-      - ./static:/usr/share/nginx/html
+      - ./static:/usr/share/nginx/html  # Mount frontend files into the container
     networks:
       - app-network
 
   backend:
     build:
-      context: ./backend
+      context: ./backend  # Path to your backend directory
     ports:
-      - "8000:8000"
+      - "8000:8000"  # FastAPI runs on port 8000
     volumes:
-      - ./backend/app:/app       # Bind mount for local development
-      - my_backend_data:/data    # Volume for persistent data
+      - ./backend/app:/app  # Mount backend code
     networks:
       - app-network
-
-volumes:
-  my_backend_data:  # Defines the volume "my_backend_data"
-    driver: local   # Default driver for local volumes
 
 networks:
   app-network:
