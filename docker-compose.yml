@@ -16,7 +16,7 @@ services:
     ports:
       - "8000:8000"  # FastAPI runs on port 8000
     volumes:
-      - ./backend/app:/app  # Mount backend code
+      - ./backend:/app  # Mount backend code
     networks:
       - app-network
 
