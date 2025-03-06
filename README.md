@@ -14,9 +14,9 @@ Docker allows you to run my program without any extra installation. All you have
 
 **Docker pull tylerkelly1/pfbackend:latest**
 
-**run -d -p 80:80 tylerkelly1/pffrontend:latest**
+**Docker run -d -p 80:80 tylerkelly1/pffrontend:latest**
 
-**run -d -p 8000:8000 tylerkelly1/pffrontend:latest**
+**Docker run -d -p 8000:8000 tylerkelly1/pfbackend:latest**
 
 Sure enough it is as simple as that. Now to use the application just goto:
 
