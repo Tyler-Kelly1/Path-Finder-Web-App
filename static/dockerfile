@@ -1,0 +1,15 @@
+FROM nginx:alpine
+
+#set up work direct
+WORKDIR /usr/share/nginx/html
+
+#Copy Each file into image
+#Currnet direct . to workdir .
+
+COPY . . 
+
+#Expose ngiinx port
+EXPOSE 80
+
+#Command to Run
+CMD ["nginx" , "-g", "daemon off;"]

@@ -1,0 +1,271 @@
+.body {
+    background-color: rgb(94, 85, 85);
+    font-family: "Roboto Slab", serif;
+    color: whitesmoke;
+
+}
+
+.sliderTitle {
+    position: relative;
+    color: whitesmoke;
+    font-size: 20px;
+    width: 400px;
+    z-index: 1;
+    top: 106%;
+    margin-left: 27%;
+}
+
+/* The slider itself */
+.slider {
+    position: absolute;
+    top: 315px;
+    left: 1.5px;
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    /* Full-width */
+    height: 25px;
+    /* Specified height */
+    background: #d3d3d3;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 20px;
+    /* Set a specific slider handle width */
+    height: 20px;
+    /* Slider handle height */
+    background: #3e3e3e;
+    /* Green background */
+    border-radius: 50%;
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #4c4c4c;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+
+.gridContainer {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 260px;
+    height: 260px;
+    margin: auto;
+}
+
+.slidecontainer {
+    width: 100%;
+    /* Width of the outside container */
+}
+
+.grid {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    gap: 0px;
+    border: black;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 2%;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: #868686;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: absolute;
+    width: 120px;
+    bottom: 150px;
+    right: calc(100% + 20px);
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    width: 100%;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #868686;
+}
+
+.dropdownOpt {
+    color: white;
+    width: 100%;
+    background-color: #868686;
+    border-style: none;
+}
+
+.dropdownOpt:hover {
+    background-color: #868686bb;
+}
+
+.dropdownOpt:active {
+    background-color: #3f3f3f;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.clearBoardButton {
+    position: absolute;
+    color: white;
+    left: calc(100% + 20px);
+    width: 120px;
+    padding: 16px;
+    font-size: 16px;
+    background-color: #868686;
+    border: none;
+    cursor: pointer;
+}
+
+.clearBoardButton:hover {
+    background-color: #868686bb;
+}
+
+.clearBoardButton:active {
+    background-color: #3f3f3f;
+}
+
+.startSearchButton {
+    color: white;
+    position: absolute;
+    right: calc(100% + 20px);
+    background-color: #868686bb;
+    width: 120px;
+    padding: 16px;
+    font-size: 16px;
+    background-color: #868686;
+    border: none;
+    cursor: pointer;
+
+}
+
+.startSearchButton:hover {
+    background-color: #868686bb;
+}
+
+.startSearchButton:active {
+    background-color: #3f3f3f;
+}
+
+.grid-cell {
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.path {
+    background-color: greenyellow;
+    border: 1px solid green;
+}
+
+.clear {
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.block {
+    background-color: brown;
+    border: 1px solid salmon;
+}
+
+.start {
+    background-color: rgb(0, 96, 0);
+    border: 1px forestgreen;
+}
+
+.goal {
+    background-color: rgb(255, 215, 0);
+    border: 1px goldenrod;
+}
+
+.errorBox {
+    position: absolute;
+    border-radius: 4%;
+    width: 250px;
+    height: 90px;
+    top: 370px;
+    right: 2px;
+    z-index: 2;
+}
+
+.errorText
+ {
+    opacity: 0;
+    width:max-content;
+    color:white;
+    background-color: rgba(159, 0, 0, 0.692);
+    padding: 7px;
+    border-radius: 15%;
+    position: absolute;
+    white-space: newline;
+    font-size: 15px;
+    z-index: 3;
+    left: 18px;
+    box-shadow: 0 0 15px 1px rgba(255, 0, 0, 0.8); /* X, Y, blur, spread, color */
+    transition: opacity 1s ease-in-out;
+}
+
+.errorText.show{
+    opacity: 1;
+}
+
+

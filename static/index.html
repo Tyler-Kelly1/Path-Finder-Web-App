@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Path Finder</title>
+
+    <!-- Importing Font from google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<script src="script.js"></script>
+<body class="body">
+    <h1>Path Finder by Tyler Kelly</h1>
+    <p id="response"></p>
+
+<div class = "gridContainer", id = "mainCont">
+        
+    <h1 class="sliderTitle">Select Size</h1>
+
+    <div id="grid"></div>
+    
+    <div class="slidecontainer">
+        <input type="range" min="10" max="20" value="10" class="slider" id="sliderID" oninput="setSize(this)">
+    </div>
+
+    
+    <div class="dropdown">
+        <button class="dropbtn">Select Tool</button>
+        <div class="dropdown-content">
+            <button onclick="setMode(1)", class = "dropdownOpt" > Clear Block</button>
+            <button onclick="setMode(2)", class = "dropdownOpt"> Place Block</button>
+            <button onclick="setMode(3)", class = "dropdownOpt"> Place Start</button>
+            <button onclick="setMode(4)", class = "dropdownOpt"> Place Goal</button>
+        </div>
+    </div>
+
+    <button onclick="clearCells()", class = 'clearBoardButton'> Clear Board</button>
+    <button onclick="sendGridToBackend()", class = 'startSearchButton'>Solve!</button>
+
+    <div class="errorBox">
+        <h1 class= 'errorText', id = "errorTextLine">Example Error Text</h1>
+    </div>
+</div>
+
+
+
+  
+
+    </script>
+</body>
+</html>
+ 
